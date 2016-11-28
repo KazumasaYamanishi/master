@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+/* ==================================================
+**
+**  HTML
+**
+================================================== */
+
+html {
+    word-wrap: break-word;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+    font-size: 14px;
+    color: #424242;
+    line-height: 1.64;
+    /*letter-spacing: 1px;*/
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    transition: .3s;
+    /*color: #0071b2;*/
+}
+
+a:hover, a:active, a:focus {
+    border: none;
+    text-decoration: none;
+    /*color: rgba(0, 113, 178, .7);*/
+}
+
+a img {
+    outline: none;
+    border: none;
+    -webkit-transition: opacity .3s, -webkit-transform .3s;
+    transition: opacity .3s, transform .3s;
+}
+
+
+/*a[href$=".pdf"]:after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    content: "\f1c1";
+    font-family: FontAwesome;
+}*/
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+}
+
+caption, th {
+    text-align: left;
+}
+
+object, embed {
+    vertical-align: top;
+}
+
+legend {
+    display: none;
+}
+
+img, abbr, acronym, fieldset {
+    border: 0;
+    vertical-align: bottom;
+}
+
+ul, ol {
+    padding-left: 2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    vertical-align: middle;
+}
+
+img {
+    box-shadow: #000 0 0 0;
+}
+
+img, x:-moz-any-link, x:default {
+    box-shadow: #000 0 0 0;
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+}
+
+
+/* ==================================================
+**
+**  WordPress
+**
+================================================== */
+
+.aligncenter, div.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
+.wp-caption {
+    border: 1px solid rgba(0, 113, 178, 1.0);
+    text-align: center;
+    background-color: #f3f3f3;
+    /*padding-top: 4px;*/
+    /*margin: 10px;*/
+    -moz-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin: 10px 0 20px 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.wp-caption img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+
+/* ==================================================
+**
+**  Wrapper
+**
+================================================== */
+
+#wrapper {
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .box-80per {
+        margin: 0 auto;
+        padding: 0 15px;
+        width: 80%;
+    }
+}
