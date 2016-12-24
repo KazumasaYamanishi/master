@@ -20,6 +20,23 @@ body {
     /*letter-spacing: 1px;*/
 }
 
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
+    padding: 1em 0 .5em;
+    font-weight: 600;
+}
+
 a {
     position: relative;
     text-decoration: none;
@@ -28,9 +45,12 @@ a {
     /*color: #0071b2;*/
 }
 
-a:hover, a:active, a:focus {
+a:hover,
+a:active,
+a:focus {
     border: none;
     text-decoration: none;
+    outline: none;
     /*color: rgba(0, 113, 178, .7);*/
 }
 
@@ -50,15 +70,25 @@ a img {
     font-family: FontAwesome;
 }*/
 
-address, caption, cite, code, dfn, em, strong, th, var {
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
     font-style: normal;
 }
 
-caption, th {
+caption,
+th {
     text-align: left;
 }
 
-object, embed {
+object,
+embed {
     vertical-align: top;
 }
 
@@ -66,12 +96,16 @@ legend {
     display: none;
 }
 
-img, abbr, acronym, fieldset {
+img,
+abbr,
+acronym,
+fieldset {
     border: 0;
     vertical-align: bottom;
 }
 
-ul, ol {
+ul,
+ol {
     padding-left: 2rem;
 }
 
@@ -86,7 +120,9 @@ img {
     box-shadow: #000 0 0 0;
 }
 
-img, x:-moz-any-link, x:default {
+img,
+x:-moz-any-link,
+x:default {
     box-shadow: #000 0 0 0;
 }
 
@@ -100,11 +136,74 @@ img, x:-moz-any-link, x:default {
 
 /* ==================================================
 **
+**  Font-Family
+**
+================================================== */
+
+@font-face {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Medium");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Yu Gothic";
+    src: local("Yu Gothic Bold");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: local("Helvetica Neue Regular");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: local("Helvetica Neue Regular");
+    font-weight: 200;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
+}
+
+
+/* IE10以上 */
+
+@media all and (-ms-high-contrast: none) {
+    body {
+        font-family: Verdana, Meiryo, sans-serif;
+    }
+}
+
+
+/* ==================================================
+**
 **  WordPress
 **
 ================================================== */
 
-.aligncenter, div.aligncenter {
+.aligncenter,
+div.aligncenter {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -143,6 +242,36 @@ img, x:-moz-any-link, x:default {
 
 /* ==================================================
 **
+**  Slick
+**
+================================================== */
+
+.slick-prev:before,
+.slick-next:before {
+    color: #ddd;
+}
+
+.slick-prev {
+    left: 6px;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 6px;
+}
+
+@media (min-width: 768px) {
+    .slick-prev {
+        left: -25px;
+    }
+    .slick-next {
+        right: -25px;
+    }
+}
+
+
+/* ==================================================
+**
 **  Wrapper
 **
 ================================================== */
@@ -156,5 +285,211 @@ img, x:-moz-any-link, x:default {
         margin: 0 auto;
         padding: 0 15px;
         width: 80%;
+    }
+}
+
+
+/* ==================================================
+**
+**  Table
+**
+================================================== */
+
+.table {
+    table-layout: fixed;
+}
+
+
+/* ==================================================
+**
+**  見出し
+**
+================================================== */
+
+.ttl--in {
+    display: inline-block;
+    margin-bottom: .3em;
+}
+
+.ttl--in__bdr {
+    padding: 0 .5em .2em;
+    border-bottom: 1px solid;
+}
+
+.ttl--in__note {
+    display: block;
+    font-size: .8em;
+}
+
+.en + .ttl--in__note {
+    font-size: .6em;
+}
+
+.lead {
+    font-weight: 600;
+}
+
+.out--top__img {
+    margin-top: 1rem;
+}
+
+@media (min-width: 1200px) {
+    .out--top {
+        margin-top: 6.25rem;
+    }
+    .out--top__img {
+        margin-top: -3.125rem;
+    }
+}
+
+.wrap-contents {
+    padding: 3.75rem 0;
+}
+
+.list-group a {
+    display: block;
+}
+
+.list-news .list-group-item {
+    padding: .75rem 0;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+
+.list-date {}
+
+.list-cat {
+    margin-left: 1em;
+}
+
+.list-ttl {
+    display: block;
+    margin-top: .75rem;
+    text-align: justify;
+}
+
+@media (min-width: 768px) {
+    .list-news .list-group-item {
+        position: relative;
+        padding: .75rem 1.25rem;
+    }
+    .list-news .list-group-item:before {
+        position: absolute;
+        top: 50%;
+        left: .5em;
+        margin-top: -1em;
+        content: '\f0da';
+        font-family: FontAwesome;
+    }
+    .list-group a {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .list-ttl {
+        display: inline;
+        margin: 0 0 0 1em;
+    }
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.disp--b__center {
+    display: block;
+    text-align: center;
+}
+
+footer {
+    position: relative;
+    padding-top: 8rem;
+    background-color: #f1f1f1;
+}
+
+#svg-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /*z-index: -1;*/
+}
+
+
+/* ==================================================
+**
+**  Swiper
+**
+================================================== */
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-container.wrap-hero {
+    background-color: #f1f1f1;
+}
+
+.wrap-hero .swiper-slide {
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrap-hero .swiper-slide:before {
+    content: '';
+    background: inherit;
+    /*.bgImageで設定した背景画像を継承する*/
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    position: absolute;
+    /*ブラー効果で画像の端がボヤけた分だけ位置を調整*/
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    /*重なり順序を一番下にしておく*/
+}
+
+/* ==================================================
+**
+**  グローバルナビ
+**
+================================================== */
+
+@media(max-width:544px) {
+    .navbar .navbar-nav>.nav-item {
+        float: none;
+        margin-left: .1rem;
+    }
+    .navbar .navbar-nav {
+        float: none !important;
+    }
+    .navbar .collapse.in,
+    .navbar .collapsing {
+        clear: both;
     }
 }
